@@ -1,11 +1,17 @@
 <template>
-  <div>calculator</div>
+  <div>
+    <MeasureButton/>
+  </div>
 </template>
 
 <script>
+import MeasureButton from "../components/MeasureButton";
+
 export default {
   name: "Calculator",
-  components: {}
+  components: {
+    MeasureButton
+  }
 };
 </script>
 
