@@ -24,7 +24,6 @@ export default {
 }
 .language-changer .language-changer__value {
   margin: 0 5px;
-  font-size: 15px;
 }
 .language-changer .language-changer__switch {
   position: relative;

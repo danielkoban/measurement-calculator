@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <LanguageChanger/>
+    <Header/>
   </div>
 </template>
 
 <script>
 import LanguageChanger from "./components/LanguageChanger.vue";
+import Header from "./components/Header";
 
 export default {
   name: "app",
   components: {
-    LanguageChanger
+    LanguageChanger,
+    Header
   }
 };
 </script>
@@ -23,7 +26,8 @@ export default {
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #212529;
 }
 
 body {
