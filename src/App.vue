@@ -2,18 +2,21 @@
   <div id="app">
     <LanguageChanger/>
     <Header/>
+    <Calculator/>
   </div>
 </template>
 
 <script>
 import LanguageChanger from "./components/LanguageChanger.vue";
 import Header from "./components/Header";
+import Calculator from "./views/Calculator";
 
 export default {
   name: "app",
   components: {
     LanguageChanger,
-    Header
+    Header,
+    Calculator
   }
 };
 </script>
