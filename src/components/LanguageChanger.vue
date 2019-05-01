@@ -2,7 +2,7 @@
   <aside class="language-changer">
     <p class="language-changer__value">English</p>
     <label class="language-changer__switch">
-      <input class="language-changer__input" type="checkbox" value="1">
+      <input class="language-changer__input" type="checkbox" v-model="obj.show" value="1">
       <span class="language-changer__slider--round"></span>
     </label>
     <p class="language-changer__value">Polski</p>
@@ -11,7 +11,14 @@
 
 <script>
 export default {
-  name: "LanguageChanger"
+  name: "LanguageChanger",
+  data() {
+    return {
+      obj: {
+        show: false
+      }
+    };
+  }
 };
 </script>
 
