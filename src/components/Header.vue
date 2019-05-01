@@ -1,7 +1,13 @@
 <template>
   <header class="header">
-    <h1 class="header__element--big">Measurement calculator</h1>
-    <h2 class="header__element--small">Convert US and European measurement units</h2>
+    <div>
+      <h1 class="header__element--big">Measurement calculator</h1>
+      <h2 class="header__element--small">Convert US and European measurement units</h2>
+    </div>
+    <div>
+      <h1 class="header__element--big">Kalkulator miar</h1>
+      <h2 class="header__element--small">Przelicz amerykańskie i europejskie jednostki</h2>
+    </div>
   </header>
 </template>
 
