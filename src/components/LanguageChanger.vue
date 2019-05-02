@@ -12,7 +12,7 @@
 <script>
 export default {
   name: "LanguageChanger",
-  props: ["obj"]
+  props: ["language"]
 };
 </script>
 

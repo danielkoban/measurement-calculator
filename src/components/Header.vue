@@ -14,7 +14,7 @@
 <script>
 export default {
   name: "Header",
-  props: ["obj"]
+  props: ["language"]
 };
 </script>
 
