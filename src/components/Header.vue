@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div v-if="!obj.show">
+    <div v-if="!language.changed">
       <h1 class="header__element--big">Measurement calculator</h1>
       <h2 class="header__element--small">Convert US and European measurement units</h2>
     </div>
