@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <LanguageChanger/>
-    <Header/>
+    <LanguageChanger v-bind:obj="obj"/>
+    <Header v-bind:obj="obj"/>
     <Calculator/>
   </div>
 </template>
@@ -17,6 +17,13 @@ export default {
     LanguageChanger,
     Header,
     Calculator
+  },
+  data() {
+    return {
+      obj: {
+        show: false
+      }
+    };
   }
 };
 </script>
