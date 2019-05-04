@@ -4,63 +4,63 @@ export const measuresInEnglish = [
         usMeasureSymbol: "°F",
         usMeasureName: "Fahrenheit scale",
         euMeasureSymbol: "°C",
-        usMeasureName: "Celsius scale"
+        euMeasureName: "Celsius scale"
     },
     {
         id: 2,
         usMeasureSymbol: "lb",
         usMeasureName: "pound",
         euMeasureSymbol: "kg",
-        usMeasureName: "kilogram"
+        euMeasureName: "kilogram"
     },
     {
         id: 3,
         usMeasureSymbol: "oz",
         usMeasureName: "ounce",
         euMeasureSymbol: "g",
-        usMeasureName: "gram"
+        euMeasureName: "gram"
     },
     {
         id: 4,
         usMeasureSymbol: "mi",
         usMeasureName: "mile",
         euMeasureSymbol: "km",
-        usMeasureName: "kilometer"
+        euMeasureName: "kilometer"
     },
     {
         id: 5,
         usMeasureSymbol: "yd",
         usMeasureName: "yard",
         euMeasureSymbol: "m",
-        usMeasureName: "meter"
+        euMeasureName: "meter"
     },
     {
         id: 6,
         usMeasureSymbol: "ft",
         usMeasureName: "foot",
         euMeasureSymbol: "cm",
-        usMeasureName: "centimeter"
+        euMeasureName: "centimeter"
     },
     {
         id: 7,
         usMeasureSymbol: "in",
         usMeasureName: "inch",
         euMeasureSymbol: "mm",
-        usMeasureName: "millimeter"
+        euMeasureName: "millimeter"
     },
     {
         id: 8,
         usMeasureSymbol: "gal",
         usMeasureName: "US gallon",
         euMeasureSymbol: "l",
-        usMeasureName: "liter"
+        euMeasureName: "liter"
     },
     {
         id: 9,
         usMeasureSymbol: "pint",
         usMeasureName: "US liquid pint",
         euMeasureSymbol: "ml",
-        usMeasureName: "milliliter"
+        euMeasureName: "milliliter"
     }
 ]
 
@@ -70,62 +70,62 @@ export const measuresInPolish = [
         usMeasureSymbol: "°F",
         usMeasureName: "stopnie Fahrenheita",
         euMeasureSymbol: "°C",
-        usMeasureName: "stopnie celsjusza"
+        euMeasureName: "stopnie celsjusza"
     },
     {
         id: 2,
         usMeasureSymbol: "lb",
         usMeasureName: "funt",
         euMeasureSymbol: "kg",
-        usMeasureName: "kilogram"
+        euMeasureName: "kilogram"
     },
     {
         id: 3,
         usMeasureSymbol: "oz",
         usMeasureName: "uncja",
         euMeasureSymbol: "g",
-        usMeasureName: "gram"
+        euMeasureName: "gram"
     },
     {
         id: 4,
         usMeasureSymbol: "mi",
         usMeasureName: "mila",
         euMeasureSymbol: "km",
-        usMeasureName: "kilometer"
+        euMeasureName: "kilometer"
     },
     {
         id: 5,
         usMeasureSymbol: "yd",
         usMeasureName: "jard",
         euMeasureSymbol: "m",
-        usMeasureName: "metr"
+        euMeasureName: "metr"
     },
     {
         id: 6,
         usMeasureSymbol: "ft",
         usMeasureName: "stopa",
         euMeasureSymbol: "cm",
-        usMeasureName: "centymeter"
+        euMeasureName: "centymeter"
     },
     {
         id: 7,
         usMeasureSymbol: "in",
         usMeasureName: "cal",
         euMeasureSymbol: "mm",
-        usMeasureName: "milimeter"
+        euMeasureName: "milimeter"
     },
     {
         id: 8,
         usMeasureSymbol: "gal",
         usMeasureName: "galon am.",
         euMeasureSymbol: "l",
-        usMeasureName: "litr"
+        euMeasureName: "litr"
     },
     {
         id: 9,
         usMeasureSymbol: "pint",
         usMeasureName: "pinta płynna am.",
         euMeasureSymbol: "ml",
-        usMeasureName: "mililiter"
+        euMeasureName: "mililiter"
     },
 ]
