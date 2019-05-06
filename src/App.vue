@@ -2,7 +2,7 @@
   <div id="app">
     <LanguageChanger v-bind:language="language"/>
     <Header v-bind:language="language"/>
-    <Calculator/>
+    <Calculator v-bind:language="language"/>
   </div>
 </template>
 

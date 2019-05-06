@@ -1,17 +1,18 @@
 <template>
   <div>
-    <MeasureButton/>
+    <EnMeasureButton v-bind:language="language"/>
   </div>
 </template>
 
 <script>
-import MeasureButton from "../components/MeasureButton";
+import EnMeasureButton from "../components/EnMeasureButton";
 
 export default {
   name: "Calculator",
   components: {
-    MeasureButton
-  }
+    EnMeasureButton
+  },
+  props: ["language"]
 };
 </script>
 
