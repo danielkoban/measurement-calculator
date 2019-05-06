@@ -22,8 +22,7 @@ export default {
     return {
       items: measuresInPolish
     };
-  },
-  props: ["language"]
+  }
 };
 </script>
 

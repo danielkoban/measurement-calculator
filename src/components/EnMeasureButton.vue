@@ -22,8 +22,7 @@ export default {
     return {
       items: measuresInEnglish
     };
-  },
-  props: ["language"]
+  }
 };
 </script>
 
