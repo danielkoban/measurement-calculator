@@ -1,7 +1,7 @@
 <template>
   <div>
-    <EnMeasureButton v-bind:language="language"/>
-    <PlMeasureButton v-bind:language="language"/>
+    <EnMeasureButton v-bind:language="language" v-if="!language.changed"/>
+    <PlMeasureButton v-bind:language="language" v-else/>
   </div>
 </template>
 
