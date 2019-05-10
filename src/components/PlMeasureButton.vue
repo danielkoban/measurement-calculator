@@ -26,5 +26,29 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.measureButton {
+  cursor: pointer;
+}
+
+.measureButton:nth-of-type(1) {
+  background: #ff4b47;
+}
+
+.measureButton:nth-of-type(2),
+.measureButton:nth-of-type(3) {
+  background: #ffbe25;
+}
+
+.measureButton:nth-of-type(4),
+.measureButton:nth-of-type(5),
+.measureButton:nth-of-type(6),
+.measureButton:nth-of-type(7) {
+  background: #27c787;
+}
+
+.measureButton:nth-of-type(8),
+.measureButton:nth-of-type(9) {
+  background: #70d7ff;
+}
 </style>
