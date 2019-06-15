@@ -15,15 +15,9 @@
 </template>
 
 <script>
-import { measuresInEnglish } from "../data/measures.js";
-
 export default {
   name: "MeasureButton",
-  data() {
-    return {
-      items: measuresInEnglish
-    };
-  }
+  props: ["items"]
 };
 </script>
 
