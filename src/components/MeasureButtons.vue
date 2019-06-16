@@ -1,5 +1,5 @@
 <template>
-  <div class="buttonWrapper">
+  <div class="buttonsWrapper">
     <div v-bind:key="item.id" class="measureButton" v-for="item in items">
       <div>
         <p class="measureButton__symbol--bold">{{item.usMeasureSymbol}}</p>
@@ -16,13 +16,13 @@
 
 <script>
 export default {
-  name: "MeasureButton",
+  name: "MeasureButtons",
   props: ["items"]
 };
 </script>
 
 <style>
-.buttonWrapper {
+.buttonsWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
