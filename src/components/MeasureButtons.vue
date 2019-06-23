@@ -1,6 +1,11 @@
 <template>
   <div class="buttonsWrapper">
-    <div v-bind:key="item.id" class="measureButton" v-for="item in items">
+    <div
+      v-bind:key="item.id"
+      class="measureButton"
+      v-for="item in items"
+      @click="$root.$emit('clicked', item.id, item.usMeasureSymbol, item.usMeasureName, item.euMeasureSymbol, item.euMeasureName )"
+    >
       <div>
         <p class="measureButton__symbol--bold">{{item.usMeasureSymbol}}</p>
         <p>{{item.usMeasureName}}</p>
