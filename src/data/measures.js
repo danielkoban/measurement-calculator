@@ -91,7 +91,7 @@ export const measuresInPolish = [
         usMeasureSymbol: "mi",
         usMeasureName: "mila",
         euMeasureSymbol: "km",
-        euMeasureName: "kilometer"
+        euMeasureName: "kilometr"
     },
     {
         id: 5,
@@ -105,14 +105,14 @@ export const measuresInPolish = [
         usMeasureSymbol: "ft",
         usMeasureName: "stopa",
         euMeasureSymbol: "cm",
-        euMeasureName: "centymeter"
+        euMeasureName: "centymetr"
     },
     {
         id: 7,
         usMeasureSymbol: "in",
         usMeasureName: "cal",
         euMeasureSymbol: "mm",
-        euMeasureName: "milimeter"
+        euMeasureName: "milimetr"
     },
     {
         id: 8,
@@ -126,6 +126,6 @@ export const measuresInPolish = [
         usMeasureSymbol: "pint",
         usMeasureName: "pinta płynna am.",
         euMeasureSymbol: "ml",
-        euMeasureName: "mililiter"
+        euMeasureName: "mililitr"
     },
 ]
