@@ -1,19 +1,27 @@
 <template>
   <div>
-    <EnMeasureButton v-if="!language.changed"/>
-    <PlMeasureButton v-else/>
+    <MeasureButtons v-bind:items="$data[!language.changed ? 'enItems':'euItems']"/>
+    <Modal/>
   </div>
 </template>
 
 <script>
-import EnMeasureButton from "../components/EnMeasureButton";
-import PlMeasureButton from "../components/PlMeasureButton";
+import MeasureButtons from "../components/MeasureButtons";
+import Modal from "../components/Modal";
+import { measuresInEnglish } from "../data/measures";
+import { measuresInPolish } from "../data/measures";
 
 export default {
   name: "Calculator",
   components: {
-    EnMeasureButton,
-    PlMeasureButton
+    MeasureButtons,
+    Modal
+  },
+  data() {
+    return {
+      enItems: measuresInEnglish,
+      euItems: measuresInPolish
+    };
   },
   props: ["language"]
 };
