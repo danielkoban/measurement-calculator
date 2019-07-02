@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <LanguageChanger v-bind:language="language"/>
-    <Header v-bind:language="language"/>
-    <Calculator v-bind:language="language"/>
+  <div id="app" class="app__container">
+    <LanguageChanger v-bind:language="language" />
+    <Header v-bind:language="language" />
+    <Calculator v-bind:language="language" />
   </div>
 </template>
 
@@ -42,5 +42,11 @@ html {
 
 body {
   background: #dbf1ff;
+}
+
+.app__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 </style>
