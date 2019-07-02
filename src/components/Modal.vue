@@ -1,22 +1,26 @@
 <template>
-  <div v-show="isOpen" class="modal">
-    <button @click="isOpen = false" class="modal__close">
-      <i class="fas fa-times"></i>
-    </button>
-    <h3>Convert units</h3>
-    <div>
-      <label for>
-        {{usMeasureSymbol}}
-        <input type="text">
-        {{usMeasureName}}
-      </label>
-      <label for>
-        {{euMeasureSymbol}}
-        <input type="text">
-        {{euMeasureName}}
-      </label>
+  <transition name="fade">
+    <div v-show="isOpen" class="modal__container">
+      <div class="modal">
+        <button @click="isOpen = false" class="modal__close">
+          <i class="fas fa-times"></i>
+        </button>
+        <h3 class="modal__header">{{header}}</h3>
+        <div class="modal__measures">
+          <label class="modal__measure" for="firstMeasure">
+            <span class="modal__measure--right modal__measure--bold">{{usMeasureSymbol}}</span>
+            <input class="modal__input" type="number" id="firstMeasure" />
+            <span class="modal__measure--right">{{usMeasureName}}</span>
+          </label>
+          <label class="modal__measure" for="secondMeasure">
+            <span class="modal__measure--right modal__measure--bold">{{euMeasureSymbol}}</span>
+            <input class="modal__input" type="number" id="secondMeasure" />
+            <span class="modal__measure--right">{{euMeasureName}}</span>
+          </label>
+        </div>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -32,6 +36,7 @@ export default {
       euMeasureName: ""
     };
   },
+  props: ["header"],
   mounted() {
     this.$root.$on(
       "clicked",
@@ -50,15 +55,60 @@ export default {
 </script>
 
 <style>
-.modal {
+.modal__container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dbf1ff;
+}
+
+.modal {
+  width: 680px;
+  height: 380px;
+  padding: 50px;
   background: #ffffff;
   border-radius: 5px;
+  position: relative;
+  /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);*/
+  border-bottom: #c8dbe8 3px solid;
+}
+
+.modal__header {
+  font-weight: normal;
+}
+
+.modal__measures {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__measure {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__measure--right {
+  text-align: right;
+}
+
+.modal__measure--bold {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.modal__input {
+  margin-bottom: 8px;
+  padding: 5px;
+  border: none;
+  border-bottom: #dddddd 2px solid;
+  outline: none;
+  font-size: 1rem;
 }
 
 .modal__close {
@@ -75,5 +125,14 @@ export default {
   text-align: center;
   line-height: 35px;
   cursor: pointer;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
