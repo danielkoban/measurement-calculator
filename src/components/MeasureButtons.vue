@@ -86,18 +86,15 @@ export default {
   font-size: 1.5rem;
 }
 
-@keyframes move {
-  0 % {
-    transform: translate(-50%, -50%);
+@media (max-width: 980px) {
+  .buttonsWrapper {
+    grid-template-columns: 1fr 1fr;
   }
-  33.33% {
-    transform: translate(-150%, -50%);
-  }
-  66.66% {
-    transform: translate(100%, -50%);
-  }
-  100% {
-    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 738px) {
+  .buttonsWrapper {
+    grid-template-columns: 1fr;
   }
 }
 </style>
