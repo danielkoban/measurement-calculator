@@ -1,7 +1,7 @@
 <template>
   <div>
-    <MeasureButtons v-bind:items="$data[!language.changed ? 'enItems':'euItems']"/>
-    <Modal/>
+    <MeasureButtons v-bind:items="$data[!language.changed ? 'enItems' : 'euItems']" />
+    <Modal v-bind:header="!language.changed ? 'Convert units' : 'Przelicz jednostki'" />
   </div>
 </template>
 
