@@ -56,8 +56,9 @@ export default {
 
 <style>
 .modal__container {
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -134,5 +135,12 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 738px) {
+  .modal {
+    width: 80%;
+    height: 85%;
+  }
 }
 </style>
