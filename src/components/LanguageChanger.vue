@@ -2,7 +2,7 @@
   <aside class="language-changer">
     <p class="language-changer__value">English</p>
     <label class="language-changer__switch">
-      <input class="language-changer__input" type="checkbox" v-model="language.changed" value="1">
+      <input class="language-changer__input" type="checkbox" v-model="language.changed" value="1" />
       <span class="language-changer__slider--round"></span>
     </label>
     <p class="language-changer__value">Polski</p>
@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .language-changer {
   display: flex;
   align-items: center;

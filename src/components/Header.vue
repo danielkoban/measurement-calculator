@@ -18,7 +18,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .header__element--big {
   font-size: 2rem;
   margin-top: 45px;
