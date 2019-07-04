@@ -49,4 +49,10 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
+
+@media (max-width: 738px) {
+  .app__container {
+    padding: 0 10px;
+  }
+}
 </style>
