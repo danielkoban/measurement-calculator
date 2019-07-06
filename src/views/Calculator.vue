@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="calculator">
     <MeasureButtons v-bind:items="$data[!language.changed ? 'enItems' : 'euItems']" />
     <Modal v-bind:header="!language.changed ? 'Convert units' : 'Przelicz jednostki'" />
   </div>
@@ -28,4 +28,7 @@ export default {
 </script>
 
 <style>
+.calculator {
+  flex-grow: 1;
+}
 </style>
