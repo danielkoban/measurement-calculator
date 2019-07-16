@@ -35,11 +35,11 @@ export default {
 
 .measureButton {
   position: relative;
+  padding: 8px 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  padding: 8px 10px;
   align-items: center;
-  border-radius: 5px;
   cursor: pointer;
   transition: all 0.4s;
 }
