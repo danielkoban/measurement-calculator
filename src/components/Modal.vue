@@ -2,19 +2,19 @@
   <transition name="fade">
     <div v-show="isOpen" class="modal__container">
       <div class="modal">
-        <button @click="isOpen = false" class="modal__close">
+        <button @click="isOpen = false; firstValue=''; secondValue=''" class="modal__close">
           <i class="fas fa-times"></i>
         </button>
         <h3 class="modal__header">{{header}}</h3>
         <div class="modal__measures">
           <label class="modal__measure" for="firstMeasure">
             <span class="modal__measure--right modal__measure--bold">{{usMeasureSymbol}}</span>
-            <input class="modal__input" type="number" id="firstMeasure" />
+            <input class="modal__input" type="number" id="firstMeasure" v-model="firstValue" />
             <span class="modal__measure--right">{{usMeasureName}}</span>
           </label>
           <label class="modal__measure" for="secondMeasure">
             <span class="modal__measure--right modal__measure--bold">{{euMeasureSymbol}}</span>
-            <input class="modal__input" type="number" id="secondMeasure" />
+            <input class="modal__input" type="number" id="secondMeasure" v-model="secondValue" />
             <span class="modal__measure--right">{{euMeasureName}}</span>
           </label>
         </div>
@@ -33,7 +33,9 @@ export default {
       usMeasureSymbol: "",
       usMeasureName: "",
       euMeasureSymbol: "",
-      euMeasureName: ""
+      euMeasureName: "",
+      firstValue: "",
+      secondValue: ""
     };
   },
   props: ["header"],
@@ -50,6 +52,115 @@ export default {
         this.isOpen = true;
       }
     );
+  },
+  methods: {
+    closeModale() {
+      this.isOpen = false;
+      this.firstValue = "";
+      this.secondValue = "";
+    }
+  },
+  watch: {
+    firstValue: function(val) {
+      const id = this.id;
+      switch (id) {
+        case 1:
+          //fahrenheit to celsius
+          this.firstValue = val;
+          this.secondValue = (val - 32) / 1.8;
+          break;
+        case 2:
+          //pound to kilogram
+          this.firstValue = val;
+          this.secondValue = val * 0.45359237;
+          break;
+        case 3:
+          //ounce to gram
+          this.firstValue = val;
+          this.secondValue = val * 28.3495231;
+          break;
+        case 4:
+          //mile to kilometer
+          this.firstValue = val;
+          this.secondValue = val * 1.609344;
+          break;
+        case 5:
+          //yard to meter
+          this.firstValue = val;
+          this.secondValue = val * 0.9144;
+          break;
+        case 6:
+          //foot to centimeter
+          this.firstValue = val;
+          this.secondValue = val * 30.48;
+          break;
+        case 7:
+          //inch to millimeter
+          this.firstValue = val;
+          this.secondValue = val * 25.4;
+          break;
+        case 8:
+          //gallon to liter
+          this.firstValue = val;
+          this.secondValue = val * 3.785411784;
+          break;
+        case 9:
+          //liquid pint to milliliter
+          this.firstValue = val;
+          this.secondValue = val * 473.2;
+          break;
+      }
+    },
+    secondValue: function(val) {
+      const id = this.id;
+      switch (id) {
+        case 1:
+          //celsius to fahrenheit
+          this.firstValue = val * 1.8 + 32;
+          this.secondValue = val;
+          break;
+        case 2:
+          //kilogram to pound
+          this.firstValue = val / 0.45359237;
+          this.secondValue = val;
+          break;
+        case 3:
+          //gram to ounce
+          this.firstValue = val / 28.3495231;
+          this.secondValue = val;
+          break;
+        case 4:
+          //kilometer to mile
+          this.firstValue = val / 1.609344;
+          this.secondValue = val;
+          break;
+        case 5:
+          //meter to yard
+          this.firstValue = val / 0.9144;
+          this.secondValue = val;
+          break;
+        case 6:
+          //centimeter to foot
+          this.firstValue = val / 30.48;
+          this.secondValue = val;
+          break;
+        case 7:
+          //millimeter to inch
+          this.firstValue = val / 25.4;
+          this.secondValue = val;
+          break;
+        case 8:
+          //liter to gallon
+          this.firstValue = val / 3.785411784;
+          this.secondValue = val;
+          break;
+        case 9:
+          //milliliter to liquid pint
+          this.firstValue = val / 473.2;
+          this.secondValue = val;
+          break;
+      }
+    }
   }
 };
 </script>
@@ -137,10 +248,23 @@ export default {
   opacity: 0;
 }
 
+@media (max-width: 980px) and {
+  .modal {
+    height: 85%;
+  }
+}
+
 @media (max-width: 738px) {
   .modal {
     width: 80%;
     height: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal__measures {
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 </style>
