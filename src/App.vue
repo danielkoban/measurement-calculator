@@ -3,6 +3,7 @@
     <LanguageChanger v-bind:language="language" />
     <Header v-bind:language="language" />
     <Calculator v-bind:language="language" />
+    <Footer />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import LanguageChanger from "./components/LanguageChanger.vue";
 import Header from "./components/Header";
 import Calculator from "./views/Calculator";
+import Footer from "./components/Footer";
 
 export default {
   name: "app",
   components: {
     LanguageChanger,
     Header,
-    Calculator
+    Calculator,
+    Footer
   },
   data() {
     return {
@@ -49,6 +52,8 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 738px) {
