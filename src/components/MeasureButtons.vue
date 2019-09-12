@@ -66,7 +66,7 @@ export default {
 }
 
 .measureButton:hover {
-  padding: 0 20px;
+  transform: translate(0, -5px);
 }
 
 .measureButton__symbol--bold {
